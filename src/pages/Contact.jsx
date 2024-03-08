@@ -18,7 +18,7 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        const forLocalStorageData = JSON.parse(localStorage.getItem("UseComments")) || []
+        const forLocalStorageData = JSON.parse(localStorage.getItem("userComments")) || []
         forLocalStorageData.push(formInput)
         localStorage.setItem("userComments", JSON.stringify(forLocalStorageData))
     }

@@ -8,6 +8,8 @@ const Contact = () => {
         comments: ""
     })
 
+    const [message, setMessage] = useState("")
+
     const handleChange = (e) => {
 
         const { name, value } = e.target
@@ -19,12 +21,16 @@ const Contact = () => {
         e.preventDefault()
 
         const forLocalStorageData = JSON.parse(localStorage.getItem("userComments")) || []
+        if(formInput.pseudo.trim() === "" || formInput.movie.trim() === "" || formInput.comments.trim() === ""){
+            return setMessage("Vous ne pouvez pas envoyer de champs vides")
+          }
         forLocalStorageData.push(formInput)
         localStorage.setItem("userComments", JSON.stringify(forLocalStorageData))
     }
 
 
     return(
+        <>
         <form method="POST" onSubmit={handleSubmit}>
             <label htmlFor="pseudo">Pseudo :</label>
             <input type="text" name="pseudo" id="pseudo" onChange={handleChange} />
@@ -34,6 +40,8 @@ const Contact = () => {
             <textarea name="comments" id="comments" cols="30" rows="10" onChange={handleChange}></textarea>
             <button type="submit">Envoyer</button>
         </form>
+        {message && <span className="message">{message}</span>}
+        </>
     )
 }
 

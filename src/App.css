@@ -77,4 +77,65 @@ article {
 
 article > h2 {
   text-align: center;
+}
+
+/* Card */
+.Cards {
+  padding-top: 1rem;
+  display: flex;
+  height: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  background-color: rgb(61, 57, 57);
+}
+
+.Card {
+  position: relative;
+  color: white;
+  margin-inline: 1rem;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .Card {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 980px) {
+  .Card {
+    width: 30%;
+  }
+}
+.Card .movie-title {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  gap: 1rem;
+  position: relative;
+  z-index: 10;
+}
+.Card .movie-title h2 {
+  text-align: right;
+}
+.Card .movie-title img {
+  width: 10em;
+}
+.Card .movie-details {
+  position: relative;
+  z-index: 10;
+}
+
+.Card > span {
+  position: absolute;
+  background-color: rgba(24, 23, 23, 0.752);
+  border-radius: 1rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
 }/*# sourceMappingURL=App.css.map */

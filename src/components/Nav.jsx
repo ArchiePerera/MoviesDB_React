@@ -5,12 +5,14 @@ const Nav = () => {
 
     return (
         <>
-        <h1>PAJS Movie</h1>
+        <nav>
+        <h1><span>PAJS</span> Movies</h1>
         <ul>
             <li><NavLink to="/">Accueil</NavLink></li>
             <li><NavLink to="/movies">Film</NavLink></li>
             <li><NavLink to="/contact">Contact</NavLink></li>
         </ul>
+        </nav>
         </>
     )
 }

@@ -1,0 +1,90 @@
+/* *****************************************************************
+TOOLS
+***************************************************************** */
+
+* {
+    box-sizing: border-box;
+}
+  
+html {
+    font-size: 62.5%;
+}
+  
+body {
+    font-size: 1.6rem;
+}
+
+/* *****************************************************************
+GENERAL
+***************************************************************** */
+
+:root {
+    --font-logo: "Whisper", cursive;
+    --font-text: "Source Sans 3", sans-serif;
+}
+
+@mixin media-min($_min-width) {
+    @media screen and (min-width: $_min-width) {
+        &{ @content }
+    }
+}
+
+body {
+    font-family: var(--font-text);
+    line-height: 1.4;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin-inline: auto;
+}
+
+/* NAVIGATION */
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+
+    @include media-min(768px) {
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-around;
+    }
+}
+
+h1 {
+    color: white;
+    margin-top: 0;
+    padding-top: 1rem;
+
+    & > span {
+        font-family: var(--font-logo);
+    }
+}
+
+nav ul {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+    padding-left: 0;
+    & a {
+        text-decoration: none;
+        color: white;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            color: red;
+        }
+    }
+}
+
+/* HOME PAGE */
+
+article {
+    padding-inline: 1rem;
+}
+
+article > h2 {
+    text-align: center;
+}

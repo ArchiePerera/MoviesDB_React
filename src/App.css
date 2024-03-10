@@ -1,42 +1,80 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* *****************************************************************
+TOOLS
+***************************************************************** */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+/* *****************************************************************
+GENERAL
+***************************************************************** */
+:root {
+  --font-logo: "Whisper", cursive;
+  --font-text: "Source Sans 3", sans-serif;
+}
+
+body {
+  font-family: var(--font-text);
+  line-height: 1.4;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+/* NAVIGATION */
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+}
+@media screen and (min-width: 768px) {
+  nav {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-around;
+  }
+}
+
+h1 {
+  color: white;
+  margin-top: 0;
+  padding-top: 1rem;
+}
+h1 > span {
+  font-family: var(--font-logo);
+}
+
+nav ul {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+  padding-left: 0;
+}
+nav ul a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+nav ul a:hover {
+  color: red;
+}
+
+/* HOME PAGE */
+article {
+  padding-inline: 1rem;
+}
+
+article > h2 {
   text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
+}/*# sourceMappingURL=App.css.map */

@@ -15,6 +15,7 @@ const Contact = () => {
         const { name, value } = e.target
         setFormInput({...formInput, [name]:value})
         console.log(formInput)
+        setMessage("")
     }
 
     const handleSubmit = (e) => {
